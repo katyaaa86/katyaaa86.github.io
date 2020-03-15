@@ -1,3 +1,7 @@
-<label>Ваш вопрос:</label>
-<input [formControl] = 'question'>
-<button (click)="sendToList()">Отправить</button>
+
+<mat-form-field appearance="outline">
+<mat-label>Ваш вопрос:</mat-label>
+<input matInput [formControl] = 'question' required>
+  </mat-form-field>
+<button mat-flat-button (click)="sendToList()">Отправить</button>
+
