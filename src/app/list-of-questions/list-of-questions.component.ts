@@ -6,10 +6,11 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./list-of-questions.component.css']
 })
 export class ListOfQuestionsComponent implements OnInit {
-  @Input() question: string
-  @Output() onClick = new EventEmitter()
+public question2 = [];
   constructor() { }
-
+addToList(evnt){
+    this.question2.push(evnt);
+}
   ngOnInit(): void {
   }
 

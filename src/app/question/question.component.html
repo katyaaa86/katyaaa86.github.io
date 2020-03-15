@@ -1,4 +1,3 @@
-<label>
-  Ваш вопрос:
-  <input type="text" [formControl]="question">
-</label>
+<label>Ваш вопрос:</label>
+<input [formControl] = 'question'>
+<button (click)="sendToList()">Отправить</button>
