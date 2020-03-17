@@ -1,7 +1,12 @@
-
+<div class="card">
+<mat-card>
 <mat-form-field appearance="outline">
 <mat-label>Ваш вопрос:</mat-label>
 <input matInput [formControl] = 'question' required>
+  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
   </mat-form-field>
-<button mat-flat-button (click)="sendToList()">Отправить</button>
-
+<mat-card-actions>
+<button mat-flat-button color="primary" (click)="sendToList()">Отправить</button>
+  </mat-card-actions>
+</mat-card>
+</div>
