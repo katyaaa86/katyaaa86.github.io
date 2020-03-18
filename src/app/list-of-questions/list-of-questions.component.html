@@ -3,11 +3,11 @@
 <div class="card">
 <div class="questions">
   <ul>
-    <li *ngFor="let question of question2">
-      {{question}}
-      <div class="likes">
-      <button mat-icon-button color="warn" (click)="getLike(like)"><mat-icon>favorite</mat-icon>{{numberOfLikes}}</button>
-        </div>
+    <li *ngFor="let question of questionsAndLikes | keyvalue">
+      {{question.key}}
+<!--      <div class="likes">-->
+      <button mat-icon-button color="warn" (click)="getLike(like, question.key)"><mat-icon>favorite</mat-icon>{{question.value}}</button>
+<!--        </div>-->
     </li>
   </ul>
 </div>

@@ -9,21 +9,22 @@ import { MatInput } from '@angular/material/input';
   styleUrls: ['./list-of-questions.component.css']
 })
 export class ListOfQuestionsComponent implements OnInit {
-public question2 = [];
-numberOfLikes = 0;
+  public questionsAndLikes = {};
+// public question2 = [];
+// numberOfLikes = [];
 like = false;
   constructor() { }
-addToList(evnt){
-    this.question2.push(evnt);
+addToList(evnt) {
+    this.questionsAndLikes[evnt] = 0;
 }
   ngOnInit(): void {
   }
-  getLike(condition: boolean) {
+  getLike(condition: boolean, question: any) {
     if (!condition) {
-      this.numberOfLikes += 1;
+      this.questionsAndLikes[question] += 1;
       this.like = !this.like;
     } else {
-      this.numberOfLikes -= 1;
+      this.questionsAndLikes[question] -= 1;
       this.like = !this.like;
     }
   }
