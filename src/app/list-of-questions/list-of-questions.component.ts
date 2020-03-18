@@ -10,17 +10,17 @@ import { MatInput } from '@angular/material/input';
 })
 export class ListOfQuestionsComponent implements OnInit {
   listOfItems = [];
-  // public questionsAndLikes = new Map();
+  i = 0;
 
   constructor() { }
 addToList(evnt) {
-    // this.questionsAndLikes.set('question', evnt);
-    // this.questionsAndLikes.set('likes', 0);
     this.listOfItems.push({
       question: evnt,
       likes: 0,
-      likeBoolean: false
+      likeBoolean: false,
+      id: this.i
     });
+    this.i = this.i + 1;
     console.log(this.listOfItems);
 }
   ngOnInit(): void {
@@ -38,7 +38,10 @@ addToList(evnt) {
     // b = this.listOfItems[id].likes;
     // tslint:disable-next-line:only-arrow-functions
     this.listOfItems = this.listOfItems.sort(function(a, b) {
-        return b.likes - a.likes;
+         if (b.likes === a.likes) {
+           return a.id - b.id;
+         }
+         return b.likes - a.likes;
     });
   }
 }

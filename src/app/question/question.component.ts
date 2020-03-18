@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Form, FormControl} from '@angular/forms';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-question',
@@ -21,6 +21,5 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {
     this.question = new FormControl('');
   }
-
 
 }
