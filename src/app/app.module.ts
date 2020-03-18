@@ -13,6 +13,7 @@ import {MatCardModule} from "@angular/material/card";
 import { MatCardActions } from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { MatGridTile } from "@angular/material/grid-list";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatGridTile } from "@angular/material/grid-list";
     MatIconModule,
     MatCardModule,
     MatGridListModule,
+    MatToolbarModule,
 
   ],
   providers: [],
