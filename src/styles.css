@@ -15,15 +15,35 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   width: 50vw;
   margin: 100px auto;
 }
-.questions  {
-  position: relative;
-  display: inline-block;
-  width: 50vw;
-  margin: 0 auto;
+.example-icon {
+  padding: 0 14px;
 }
-.likes {
-  position: relative;
-  display: inline-block;
 
+.example-spacer {
+  flex: 1 1 auto;
 }
+.list {
+  white-space: pre-line;
+}
+mat-toolbar-row {
+  height: 100% !important;
+  align-items: flex-start !important;
+}
+/*.row {*/
+/*  display: flex;*/
+/*  position: relative;*/
+/*  justify-content: space-between;*/
+/*  flex-wrap: wrap;*/
+/*}*/
+
+/*.questions  {*/
+/*  position: relative;*/
+/*  display: inline-block;*/
+/*  max-width: 30vw;*/
+/*}*/
+/*.likes {*/
+/*  position: relative;*/
+/*  display: inline-block;*/
+
+/*}*/
 
