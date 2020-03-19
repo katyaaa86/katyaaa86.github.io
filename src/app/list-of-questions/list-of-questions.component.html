@@ -1,30 +1,20 @@
 
 <app-question (sendQuestion)="addToList($event)"></app-question>
-<!--<mat-toolbar>-->
-<!--  <mat-toolbar-row *ngFor="let item of listOfItems, let id = index">-->
-<!--    <div class="list">-->
-<!--    <span>{{item['question']}}</span>-->
-<!--    <span class="example-spacer"></span>-->
-<!--    <button mat-icon-button color="warn" (click)="getLike(item['likeBoolean'], id)" class="example-icon"><mat-icon>favorite</mat-icon>{{item['likes']}}</button>-->
-<!--    </div>-->
-<!--  </mat-toolbar-row>-->
-<!--</mat-toolbar>-->
-
-
 
 <div class="card">
-  <mat-toolbar>
-  <ul>
-    <li *ngFor="let item of listOfItems, let id = index" class="row">
+
+<!--  <ul>-->
+    <h6 *ngFor="let item of listOfItems, let id = index" class="row">
+<mat-toolbar>
       <mat-toolbar-row>
         <span  class="list">{{item['question']}}</span>
         <span class="example-spacer"></span>
       <button mat-icon-button color="warn" (click)="getLike(item['likeBoolean'], id)" class="example-icon"><mat-icon>favorite</mat-icon>{{item['likes']}}</button>
         </mat-toolbar-row>
-      <br>
-    </li>
-  </ul>
     </mat-toolbar>
+    </h6>
+<!--  </ul>-->
+
 </div>
 
 

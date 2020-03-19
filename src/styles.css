@@ -25,25 +25,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .list {
   white-space: pre-line;
 }
+h6 {
+  margin: 0 !important;
+}
 mat-toolbar-row {
   height: 100% !important;
   align-items: flex-start !important;
+  padding: 16px !important;
+  font-weight: 300 !important;
+  font-size: 16px;
 }
-/*.row {*/
-/*  display: flex;*/
-/*  position: relative;*/
-/*  justify-content: space-between;*/
-/*  flex-wrap: wrap;*/
-/*}*/
+mat-card-actions {
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+mat-form-field {
+  display: inline !important;
+}
 
-/*.questions  {*/
-/*  position: relative;*/
-/*  display: inline-block;*/
-/*  max-width: 30vw;*/
-/*}*/
-/*.likes {*/
-/*  position: relative;*/
-/*  display: inline-block;*/
-
-/*}*/
-
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 80vw;
+  }
+}

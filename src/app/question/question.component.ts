@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-question',
@@ -19,7 +19,7 @@ export class QuestionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.question = new FormControl('');
+    this.question = new FormControl('', [Validators.required]);
   }
 
 }
