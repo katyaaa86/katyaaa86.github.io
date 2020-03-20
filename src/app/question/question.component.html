@@ -1,0 +1,11 @@
+<div class="card">
+<mat-card>
+<mat-form-field appearance="outline">
+<mat-label>Ваш вопрос:</mat-label>
+<input matInput [formControl] = 'question' required>
+  </mat-form-field>
+<mat-card-actions>
+<button mat-flat-button color="primary" [disabled]="!question.valid" (click)="sendToList(); question.reset()">Отправить</button>
+  </mat-card-actions>
+</mat-card>
+</div>
