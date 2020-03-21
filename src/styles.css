@@ -1,20 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-html, body{ height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .card {
   position: relative;
   width: 50vw;
   margin: 100px auto;
 }
+
 .example-icon {
   padding: 0 14px;
 }
@@ -22,12 +41,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .example-spacer {
   flex: 1 1 auto;
 }
+
 .list {
   white-space: pre-line;
 }
+
 h6 {
   margin: 0 !important;
 }
+
 mat-toolbar-row {
   height: 100% !important;
   align-items: flex-start !important;
@@ -35,10 +57,12 @@ mat-toolbar-row {
   font-weight: 300 !important;
   font-size: 16px;
 }
+
 mat-card-actions {
   margin-left: 0 !important;
   margin-bottom: 0 !important;
 }
+
 mat-form-field {
   display: inline !important;
 }
