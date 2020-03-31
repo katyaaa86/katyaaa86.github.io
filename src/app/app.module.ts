@@ -11,6 +11,8 @@ import {FormsModule} from '@angular/forms';
 import {MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {StoreModule} from "@ngrx/store";
+import {likesReducer} from "./reducer";
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     MatIconModule,
     MatCardModule,
     MatToolbarModule,
+    StoreModule.forRoot({ count: likesReducer })
 
   ],
   providers: [],

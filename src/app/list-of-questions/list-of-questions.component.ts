@@ -2,6 +2,9 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';
+import {Store, select} from "@ngrx/store";
+import {Observable} from "rxjs";
+import {likeQuestion, dislikeQuestion} from "../actions";
 
 @Component({
   selector: 'app-list-of-questions',
@@ -11,14 +14,22 @@ import {MatInput} from '@angular/material/input';
 export class ListOfQuestionsComponent implements OnInit {
   listOfItems = [];
   i = 0;
+  count$: Observable<number>;
 
-  constructor() {
+  constructor(private store: Store<{count: number}>) {
+    this.count$ = store.pipe(select('count'));
   }
 
+  likeQuestion() {
+    this.store.dispatch(likeQuestion());
+  }
+  dislikeQuestion() {
+    this.store.dispatch(dislikeQuestion());
+  }
   addToList(evnt) {
     this.listOfItems.push({
       question: evnt,
-      likes: 0,
+      likes: this.count$,
       likeBoolean: false,
       id: this.i
     });
@@ -29,7 +40,7 @@ export class ListOfQuestionsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getLike(condition: boolean, id: number) {
+  /*getLike(condition: boolean, id: number) {
     if (!condition) {
       this.listOfItems[id].likes += 1;
       this.listOfItems[id].likeBoolean = !this.listOfItems[id].likeBoolean;
@@ -45,5 +56,5 @@ export class ListOfQuestionsComponent implements OnInit {
       }
       return b.likes - a.likes;
     });
-  }
+  }*/
 }

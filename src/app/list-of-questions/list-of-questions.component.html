@@ -6,9 +6,11 @@
       <mat-toolbar-row>
         <span class="list">{{item['question']}}</span>
         <span class="example-spacer"></span>
-        <button mat-icon-button color="warn" (click)="getLike(item['likeBoolean'], id)" class="example-icon">
-          <mat-icon>favorite</mat-icon>
-          {{item['likes']}}</button>
+        <button id="likeQuestion" mat-icon-button  (click)="likeQuestion()" class="example-icon"><mat-icon color="primary">thumb_up</mat-icon></button>
+          <div>{{ count$ | async }}</div>
+        <button id="dislikeQuestion" mat-icon-button color="warn" (click)="dislikeQuestion()" class="example-icon"><mat-icon>thumb_down</mat-icon></button>
+<!--          <mat-icon>favorite</mat-icon>
+          {{item['likes']}}</button>-->
       </mat-toolbar-row>
     </mat-toolbar>
   </h6>
